@@ -36,11 +36,27 @@
    <p> City Name :- {{cityname}}</p>
    <p> Country Name :- {{country}}</p>
    <p> Temprature:- {{temp}}</p>
-   <p> Weather Status:- {{WeatherStatus}} </p>
+   <p id="ws">Weather Status:-{{WeatherStatus}}  </p>
  </div>
  <!-- footer section -->
  <footer >
 
  </footer>
- <script src="js/main.js"></script>
+ <script > 
+ var ws = document.getElementById("ws");
+let WeatherStatus = "{{WeatherStatus}}";
+
+if(WeatherStatus=="Clouds"){
+     ws.innerHTML="<i class='fas fa-cloud'></i>"
+   }
+else if(WeatherStatus=="Rain"){
+     ws.innerHTML="<i class='fas fa-cloud-rain'></i>"
+   }
+else if(WeatherStatus=="Sun"){
+     ws.innerHTML="<i class='fas fa-sun'></i>"
+   }
+else{
+   ws.innerHTML="<i class='fas fa-cloud'></i>"
+}
+</script>
   </body>
