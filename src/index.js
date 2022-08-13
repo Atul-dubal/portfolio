@@ -7,7 +7,7 @@ const hbs = require("hbs");
 
 // Various Important Variable 
 const app = express();
-const port = process.env.port || 2206;
+const port = process.env.PORT || 2206;
 const viewspath = path.join(__dirname,"../templates/views")
 //Middleware static folder for css js files
 app.use(express.static(path.join(__dirname,"../public")));
