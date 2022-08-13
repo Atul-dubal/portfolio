@@ -1,0 +1,63 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: fantasy;
+}
+nav{
+  width: 100%;
+  background: white;
+  height:50px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+}
+header{
+  line-height: 50px;
+   
+  margin-right:auto;
+  margin-left:10px ;
+}
+.fa-snowflake {
+  transition: all linear;
+  animation: rot 2s linear infinite;
+}
+@keyframes rot{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+#menu{
+  margin:-18px 5px 0px auto;
+}
+#menu1,#menu2,#menu3{
+  width: 28px;
+  height: 4px;
+  margin: 2px;
+  background:grey;
+  border: 1px solid black;
+}
+
+/* For Contact Us Section Css */
+#contact-us{
+  width: 85%;
+  text-align: center;
+  background :#a1a3a4;
+  padding: 1%;
+  margin: 5%;
+}
+#contact-us label, #contact-us input {
+  margin: 10px;
+  text-align: center;
+}
+#contact-us input{
+  width: 70%;
+  height: 30px;
+}
+#contact-us textarea{
+  width: 70%;
+ 
+}

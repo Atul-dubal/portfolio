@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  </head>
+  <body>                                                           <nav>
+     <header id="header"> <i class="fas fa-snowflake"></i> Check Weather <i class="fas fa-snowflake"></i></header><span id="menu">     <div id="menu">
+     <div id="menu1"></div>
+     <div id="menu2"></div>
+     <div id="menu3"></div>
+   </div>
+</span>
+   </nav>
+ <!-- Intro section -->
+ <div id="intro-section">
+
+ </div>
+ <!-- Contact Us Section -->
+ <div id="contact-us">
+   <form action="/" method="post">
+
+     <label>City Name</label>
+     <br />
+     <input type="text" name="cityname" placeholder="Enter City Name">
+     <br />
+     <input type="submit" value="Submit">
+
+   </form>
+ </div>
+ <div id="data">
+   <div id="tempStatus"></div>
+   <p> City Name :- {{cityname}}</p>
+   <p> Country Name :- {{country}}</p>
+   <p> Temprature:- {{temp}}</p>
+   <p> Weather Status:- {{WeatherStatus}} </p>
+ </div>
+ <!-- footer section -->
+ <footer >
+
+ </footer>
+ <script src="js/main.js"></script>
+  </body>
