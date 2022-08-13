@@ -16,9 +16,7 @@
 </span>
    </nav>
  <!-- Intro section -->
- <div id="intro-section">
-
- </div>
+ <div id="errorTag"> </div>
  <!-- Contact Us Section -->
  <div id="contact-us">
    <form action="/" method="post">
@@ -31,22 +29,32 @@
 
    </form>
  </div>
- <div id="data">
+ <div id="data" align="center">
+     <h3 style="color:lightblue" id="ws">Weather Status:-{{WeatherStatus}}  </h3>
    <div id="tempStatus"></div>
    <p> City Name :- {{cityname}}</p>
    <p> Country Name :- {{country}}</p>
    <p> Temprature:- {{temp}}</p>
-   <p id="ws">Weather Status:-{{WeatherStatus}}  </p>
+ 
  </div>
+ 
  <!-- footer section -->
  <footer >
 
  </footer>
  <script > 
  var ws = document.getElementById("ws");
+ var data = document.getElementById("contact-us");
+ var errorTag = document.getElementById("errorTag");
 let WeatherStatus = "{{WeatherStatus}}";
+let notcity= "{{response}}";
 
-if(WeatherStatus=="Clouds"){
+if(notcity=="error"){
+ 
+  errorTag.innerHTML="<h5 align='center'style='margin:20px; padding:20px;color:red; background:lightred'>Please Enter Correct City Name </h5>";
+  //data.style.display="none";
+}else{ 
+   if(WeatherStatus=="Clouds"){
      ws.innerHTML="<i class='fas fa-cloud'></i>"
    }
 else if(WeatherStatus=="Rain"){
@@ -57,6 +65,7 @@ else if(WeatherStatus=="Sun"){
    }
 else{
    ws.innerHTML="<i class='fas fa-cloud'></i>"
+}
 }
 </script>
   </body>

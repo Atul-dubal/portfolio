@@ -10,12 +10,14 @@ Router.get("/",(req,res)=>{
 Router.post("/",(req,res)=>{
   const city = req.body.cityname;
   console.log(city);
-  
-  let api = `https://api.openweathermap.org/data/2.5/weather?q=${city} &appid=56c39d27a11640d544df9b82d70f0f8f`;
-
-requests(api).on("data",(chunk)=>{
-  const arrObj = JSON.parse(chunk);
  
+  let api = `https://api.openweathermap.org/data/2.5/weather?q=${city} &appid=56c39d27a11640d544df9b82d70f0f8f`;
+function getData(){
+
+  requests(api).on("data",(chunk)=>{
+  const arrObj = JSON.parse(chunk);
+  if(!arrObj.message){
+    
     const temp =  arrObj.main.temp-273;
     const newtemp =  temp.toFixed(2);
   
@@ -31,7 +33,17 @@ requests(api).on("data",(chunk)=>{
       
     })
 
-  }); 
+ 
+}
+else{
+  res.render("index",{
+      response:"error"
+    })
+}
+
+});
+}
+getData();
 });
 
   
